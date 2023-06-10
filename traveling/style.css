@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css?family=Marck+Script');
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	font-family: 'Marck Script', cursive;
+	font-size: 20pt;
+	color: #fba6b0;
+	text-shadow: 2px 3px 5px white;
+	background-color: #adeaeb;
+}
+
+div {
+	border: 4px solid #fdf1e5;
+}
+
+
+.item_london {
+	grid-area: london;
+	width: 425px;
+	height: 600px;
+	background-image: url(images/london.jpg);
+}
+
+.item_london p {
+	opacity: 0;
+	width: 375px;
+	height: 550px;
+	padding: 25px;
+	background-color: rgba(105, 89, 99, 0.8);
+	color: #fbfdbe;
+	border-radius: 0 0 60%;
+	text-align: justify;
+	transform-origin: center top;
+	transition: opacity 1s linear, transform 1s linear;
+	transform: rotateX(-180deg)
+}
+
+.about {
+	border-top: 1px solid white;
+}
+
+.place_name {
+	text-align: center;
+	font-size: 30pt;
+}
+
+.item_london:hover p {
+	opacity: 1;
+	transform: rotateX(0);
+}
+
+.item_paris {
+	grid-area: paris;
+	width: 425px;
+	height: 600px;
+	background-image: url(images/paris.jpg);
+}
+
+.item_paris p {
+	opacity: 0;
+	transform: rotateY(180deg);
+	width: 375px;
+	height: 550px;
+	padding: 25px;
+	background-color: rgba(105, 89, 99, 0.8);
+	color: #fbfdbe;
+	transition: opacity 1s linear, transform 1s linear;
+	text-align: center;
+}
+
+.item_paris:hover p {
+	opacity: 1;
+	transform: rotateY(0deg);
+}
+
+.item_quote1 {
+	grid-area: quote1;
+	padding: 15px;
+}
+
+.item_venice {
+	grid-area: venice;
+	width: 425px;
+	height: 600px;
+	background-image: url(images/venice.jpg);
+}
+
+.item_venice p {
+	opacity: 0;
+	transform: scale(0.1, 0.1);
+	width: 375px;
+	height: 550px;
+	padding: 25px;
+	background-color: rgba(105, 89, 99, 0.8);
+	color: #fbfdbe;
+	transition: opacity 1s linear, transform 1s linear;
+	text-align: center;
+}
+
+.item_venice:hover p {
+	opacity: 1;
+	transform: scale(1, 1);
+}
+
+.item_turtsiya {
+	grid-area: turtsiya;
+	width: 850px;
+	height: 300px;
+	background-image: url(images/Turtsiya.jpg);
+}
+
+.item_turtsiya p {
+	opacity: 0;
+	transform: skewX(-70deg);
+	width: 800px;
+	height: 250px;
+	padding: 25px;
+	background-color: rgba(105, 89, 99, 0.8);
+	color: #fbfdbe;
+	transition: opacity 1s linear, transform 1s linear;
+	text-align: center;
+}
+
+.item_turtsiya:hover p {
+	opacity: 1;
+	transform: skewX(0deg);
+}
+
+
+
+.item_quote2 {
+	grid-area: quote2;
+	padding: 15px;
+}
+
+
+.header_item {
+	grid-area: header;
+	padding: 15px;
+}
+
+.footer_item {
+	grid-area: footer;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	grid-template-rows: auto auto auto 250px;
+	grid-template-areas: "header header header" "london paris quote1" "turtsiya turtsiya venice" "quote2 quote2 venice";
+	grid-column-gap: 10px;
+	grid-row-gap: 15px;
+	justify-items: center;
+	align-items: center;
+}
